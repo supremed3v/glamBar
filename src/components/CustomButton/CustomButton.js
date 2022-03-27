@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     marginVertical: 11,
 
     alignItems: "center",
-    borderRadius: 5,
+    borderRadius: 15,
   },
 
   container_PRIMARY: {
@@ -43,7 +43,9 @@ const styles = StyleSheet.create({
     color: "white",
   },
 
-  text_TERTIARY: {},
+  text_TERTIARY: {
+    color: 'gray'
+  },
 });
 
 export default CustomButton;
