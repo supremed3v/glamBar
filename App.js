@@ -6,13 +6,14 @@ import {
 
 import React from "react";
 
-import SignInScreen from "./src/screens/SignInScreen";
-
-
+import SignInScreen from "./src/screens/SignInScreen/SignInScreen"
+import ForgotPassword from "./src/screens/ForgotPassword/forgotPassword";
 export default function App() {
   return (
     <View style={styles.container}>
-      <SignInScreen/>
+      {/* <SignInScreen /> */
+      }
+      <ForgotPassword/>
     </View>
   );
 }
