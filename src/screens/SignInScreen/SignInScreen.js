@@ -58,6 +58,11 @@ const onCreateAnAccount = () =>{
             value={username}
             setValue={setUsername}
           />
+           <CustomInput
+            placeholder="Firstname"
+            value={username}
+            setValue={setUsername}
+          />
           <CustomInput
             placeholder="Password"
             value={password}
@@ -77,6 +82,16 @@ const onCreateAnAccount = () =>{
 
           <CustomButton text="Sign In Facebook" onPress={onSignInFacebook} bgColor="#e7eaf4" fgColor="#4765a9" />
 
+          <CustomButton
+            text="Don't have an account? Create one."
+            onPress={onCreateAnAccount}
+            type="TERTIARY"
+          />
+          <CustomButton
+            text="Don't have an account? Create one."
+            onPress={onCreateAnAccount}
+            type="TERTIARY"
+          />
           <CustomButton
             text="Don't have an account? Create one."
             onPress={onCreateAnAccount}
