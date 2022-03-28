@@ -12,7 +12,7 @@ import TermsandConditions from "./src/screens/TermsandConditions/TermsandConditi
 import SignupScreen from "./src/screens/SignupScreen/SignUpScreen";
 import ClientDetails from "./src/screens/ClientDetails/ClientDetails";
 export default function App() {
-  return (
+  return ( 
     <View style={styles.container}>
       <SignInScreen />
       {/* <ForgotPassword/>  */}
