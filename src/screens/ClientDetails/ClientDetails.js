@@ -41,6 +41,7 @@ const ClientDetails = () => {
           placeholder="Contact No #"
           value={contact}
           setValue={setContact}
+          keyboardType="numeric"
         />
         <CustomInput
           placeholder="Address"

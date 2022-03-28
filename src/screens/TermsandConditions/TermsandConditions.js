@@ -28,7 +28,7 @@ import {
   };
   const styles = StyleSheet.create({
     TermsText: {
-      marginTop: 15,
+      marginTop: 40,
       fontSize: 26,
       fontWeight: "bold",
       color: "#5085E1",

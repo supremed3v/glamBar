@@ -1,7 +1,7 @@
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 import React, {useState} from 'react'
 
-const CustomInput = ({value, setValue, placeholder, secureTextEntry}) => {
+const CustomInput = ({value, setValue, placeholder, keyboardType, secureTextEntry}) => {
 
   return (
     <View style={styles.container}>
@@ -12,6 +12,8 @@ const CustomInput = ({value, setValue, placeholder, secureTextEntry}) => {
             style={styles.input}
             autoCapitalize="none"
             secureTextEntry={secureTextEntry}
+            keyboardType={keyboardType}
+            
           />
         
     </View>
