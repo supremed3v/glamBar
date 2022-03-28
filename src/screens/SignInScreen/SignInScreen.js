@@ -75,7 +75,7 @@ const onCreateAnAccount = () =>{
           <CustomButton
             text="Forgot Password?"
             onPress={onForgotPasswordPressed}
-            type="TERTIARY"
+            type="SECONDARY"
           />
 
           <CustomButton text="Sign In With Google" onPress={onSignInGoogle} bgColor="#FAE9EA" fgColor="#DD4D44" />
@@ -85,17 +85,7 @@ const onCreateAnAccount = () =>{
           <CustomButton
             text="Don't have an account? Create one."
             onPress={onCreateAnAccount}
-            type="TERTIARY"
-          />
-          <CustomButton
-            text="Don't have an account? Create one."
-            onPress={onCreateAnAccount}
-            type="TERTIARY"
-          />
-          <CustomButton
-            text="Don't have an account? Create one."
-            onPress={onCreateAnAccount}
-            type="TERTIARY"
+            type="SECONDARY"
           />
         </View>
       </ImageBackground>
@@ -112,7 +102,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   centerItems: {
-    marginTop: 10,
+    marginTop: 5,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",

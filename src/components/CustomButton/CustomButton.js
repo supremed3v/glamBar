@@ -46,6 +46,10 @@ const styles = StyleSheet.create({
   text_TERTIARY: {
     color: 'gray'
   },
+
+  text_SECONDARY: {
+    color: "white"
+  }
 });
 
 export default CustomButton;
