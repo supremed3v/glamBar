@@ -14,7 +14,6 @@ import ClientDetails from "./src/screens/ClientDetails/ClientDetails";
 import Home from './src/screens/Home'
 import SalonScreen from './src/screens/SalonScreen'
 import SalonServices from "./src/screens/SalonScreen/SalonServices";
-import NewPassword from "./src/screens/NewPassword/NewPassword";
 export default function App() {
   return ( 
     <View style={styles.container}>
@@ -25,8 +24,7 @@ export default function App() {
       {/* <ClientDetails/> */}
       {/* <Home/> */}
       {/* <SalonScreen/> */}
-      {/* <SalonServices/> */}
-      <NewPassword/>
+      <SalonServices/>
     </View>
   );
 }
