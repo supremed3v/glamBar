@@ -15,10 +15,8 @@ import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
 
 import React, { useState } from "react";
-
-
-import  FontAwesome  from '@expo/vector-icons';
-import  Foundation  from '@expo/vector-icons';
+import Foundation from '@expo/vector-icons/Foundation';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 const SignInScreen = () => {
   const [username, setUsername] = useState("");
@@ -50,26 +48,33 @@ const onCreateAnAccount = () =>{
             source={logo}
             style={[styles.logo, { height: height * 0.3 }]}
           />
-          <FontAwesome style={styles.userIcon} name="user" size={40} color="black" />
-          <Foundation style={styles.passwordIcon} name="key" size={40} color="black" />
+          
         </View>
+        
         <View style={styles.centerItems}>
           <Text style={styles.text}>Login or Signup to get started.</Text>
           
-
+          <View style={styles.userInput}>
+          <FontAwesome style={styles.userIcon} name="user" size={30} color="white" />
           <CustomInput
             placeholder="Username"
             value={username}
             setValue={setUsername}
             
+            
           />
-          
+          </View>
+
+          <View style={styles.passwordInput}>
+          <Foundation style={styles.passwordIcon} name="key" size={30} color="white" />
           <CustomInput
-            placeholder="Password"
+            placeholder ="Password" 
             value={password}
             setValue={setPassword}
             secureTextEntry={true}
+
           />
+          </View>
 
           <CustomButton text="Sign In" onPress={onSignInPressed} />
 
@@ -122,14 +127,33 @@ const styles = StyleSheet.create({
     zIndex: 2,
     maxWidth: 500,
   },
-  userIcon:{
-      position: "absolute",
-      marginTop: 20,
+  passwordInput:{
+    textAlign: "center",
+    flexDirection: "row",
+    width: "90%",
+    justifyContent: "space-between",
+    alignItems:"flex-end",
+    marginRight: 40,
+    
   },
   passwordIcon:{
-    position:"absolute",
-    marginTop: 80,
+ marginLeft:40,
+ height: 40,
+  },
+  userInput:{
+    textAlign: "center",
+    flexDirection: "row",
+    width: "90%",
+    justifyContent: "space-between",
+    alignItems:"flex-end",
+    marginRight: 40,
+    
+  },
+  userIcon:{
+ marginLeft:40,
+ height: 40,
   }
+  
 });
 
 export default SignInScreen;

@@ -6,7 +6,7 @@ import {
 
 import React from "react";
 
-import SignInScreen from "./src/screens/SignInScreen/SignInScreen"
+import SignInScreen from "./src/screens/SignInScreen"
 import ForgotPassword from "./src/screens/ForgotPassword/ForgotPassword";
 import TermsandConditions from "./src/screens/TermsandConditions/TermsandConditions";
 import SignupScreen from "./src/screens/SignupScreen/SignUpScreen";
