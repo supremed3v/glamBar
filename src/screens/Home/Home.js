@@ -1,110 +1,86 @@
-import { View, Text, StyleSheet, Image, ScrollView } from 'react-native'
-import React, {useState} from 'react'
+import { View, Text, StyleSheet, Image, ScrollView, FlatList, SafeAreaView } from 'react-native'
+import React, { useState } from 'react'
 import CustomInput from '../../components/CustomInput'
-import bgCard from '../../../assets/card-bg.jpeg'
-import  Ionicons  from '@expo/vector-icons/Ionicons'
+import Ionicons from '@expo/vector-icons/Ionicons'
+import myData from '../../DummyData/SalonHomeData.json'
 
 const Home = () => {
-    const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('')
   return (
     <ScrollView showsVerticalScrollIndicator={false} >
-      <View style={styles.container}>
 
-      <Text>
+      
+      <SafeAreaView>
+      <FlatList
+        data={myData}
+        ListHeaderComponent={
+          <View style={styles.container}>
+
+        <Text>
           Home
-      </Text>
-      
-      <CustomInput 
-            placeholder="Search"
-            value={search}
-            setValue={setSearch}
-          />
-      </View>
-      
-      <View style={styles.card}>
-        <Image source={bgCard} style={styles.cardImg} />
-        <View style={styles.textSalon}>
-        <Text>Stylers</Text>
-        <Text style={styles.textRating}><Ionicons name='star' size={14} color="yellow" /> 4.2</Text>
-        </View>
-        <Text>Female</Text>
-      </View>
+        </Text>
 
-      <View style={styles.card}>
-        <Image source={bgCard} style={styles.cardImg} />
-        <View style={styles.textSalon}>
-        <Text>Stylers</Text>
-        <Text style={styles.textRating}><Ionicons name='star' size={14} color="yellow" /> 4.2</Text>
-        </View>
-        <Text>Female</Text>
+        <CustomInput
+          placeholder="Search"
+          value={search}
+          setValue={setSearch}
+        />
       </View>
-      
+        }
+        renderItem={({ item, id }) => (
+          <View key={id} style={styles.card}>
+            <Image source={{uri: item.img}} style={styles.cardImg} />
+            <View style={styles.textSalon}>
+              <Text>{item.name}</Text>
+              <Text style={styles.textRating}><Ionicons name='star' size={14} color="yellow" /> {item.rating}</Text>
+            </View>
+            <Text>{item.gender}</Text>
+          </View>
+        )}
 
-      <View style={styles.card}>
-        <Image source={bgCard} style={styles.cardImg} />
-        <View style={styles.textSalon}>
-        <Text>Stylers</Text>
-        <Text style={styles.textRating}><Ionicons name='star' size={14} color="yellow" /> 4.2</Text>
-        </View>
-        <Text>Female</Text>
-      </View>
-      
-      <View style={styles.card}>
-        <Image source={bgCard} style={styles.cardImg} />
-        <View style={styles.textSalon}>
-        <Text>Stylers</Text>
-        <Text style={styles.textRating}><Ionicons name='star' size={14} color="yellow" /> 4.2</Text>
-        </View>
-        <Text>Female</Text>
-      </View>
+      />
+      </SafeAreaView>
 
-      <View style={styles.card}>
-        <Image source={bgCard} style={styles.cardImg} />
-        <View style={styles.textSalon}>
-        <Text>Stylers</Text>
-        <Text style={styles.textRating}><Ionicons name='star' size={14} color="yellow" /> 4.2</Text>
-        </View>
-        <Text>Female</Text>
-      </View>
-      </ScrollView>
+    </ScrollView>
+
   )
 }
 
 const styles = StyleSheet.create({
-    container:{
-        alignItems: "center",
-        marginTop: 50,
-    },
+  container: {
+    alignItems: "center",
+    marginTop: 50,
+  },
 
-    card:{
-        
-        width: 250,
-        height: 200,
-        paddingLeft: 50,
-        paddingRight: 50,
-        marginTop: 10,
-        // backgroundColor: "black",
-    },
-    cardImg: {
-        borderRadius: 15,
-        width:250,
-        height:150,
-        resizeMode: "cover",
-    },
+  card: {
 
-    textSalon:{
-      fontSize: 48,
-      flexDirection: "row",
-      fontWeight: "bold",
-      color: '#5085E1',
-      alignItems: "center",
-      justifyContent: "space-between",
-      paddingRight: 20,
-    },
-    textRating: {
-      paddingLeft: 90,
-    }
-    
+    width: 250,
+    height: 200,
+    paddingLeft: 50,
+    paddingRight: 50,
+    marginTop: 10,
+    // backgroundColor: "black",
+  },
+  cardImg: {
+    borderRadius: 15,
+    width: 250,
+    height: 150,
+    resizeMode: "cover",
+  },
+
+  textSalon: {
+    fontSize: 48,
+    flexDirection: "row",
+    fontWeight: "bold",
+    color: '#5085E1',
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingRight: 20,
+  },
+  textRating: {
+    paddingLeft: 90,
+  }
+
 
 })
 

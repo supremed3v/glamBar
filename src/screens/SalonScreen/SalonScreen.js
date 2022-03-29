@@ -66,9 +66,6 @@ const styles = StyleSheet.create({
   backIcon:{
     position: "absolute",
   }
-  
-  
 })
 
-export default SalonScreen
-
+export default SalonScreen;
