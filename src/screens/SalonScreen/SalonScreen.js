@@ -1,16 +1,22 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import salonbg from '../../../assets/salonbg.jpeg'
-import { Ionicons } from '@expo/vector-icons';
+import  Ionicons  from '@expo/vector-icons/Ionicons';
 
 const SalonScreen = () => {
+  const onBackPress = () =>{
+
+    // set route
+    console.log("Send me to previous screen");
+  }
   return (
     <View style={{marginTop: 50}} >
       <View>
         <Image style={styles.image} source={salonbg} resizeMode="cover" />
       </View>
+      <Ionicons style={styles.backIcon} name="md-chevron-back-circle-sharp" onPress={onBackPress} size={40} color="white" />
       <View>
-      <Text><Ionicons name="md-chevron-back-circle-sharp" size={14} color="black" /></Text>
+      <Text></Text>
       </View>
       <View style={styles.container}>
         <Text style={{marginTop: 20, marginLeft: 20,}} >Stylers Salon</Text>
@@ -56,6 +62,9 @@ const styles = StyleSheet.create({
   textAbout:{
     fontWeight: "bold",
     paddingRight: 20,
+  },
+  backIcon:{
+    position: "absolute",
   }
   
   
