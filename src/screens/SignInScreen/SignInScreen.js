@@ -13,9 +13,12 @@ import image from "../../../assets/bg-screen.jpg";
 import logo from "../../../assets/logo-white.png";
 import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
+
+import React, { useState } from "react";
+
+
 import  FontAwesome  from '@expo/vector-icons';
 import  Foundation  from '@expo/vector-icons';
-import React, { useState } from "react";
 
 const SignInScreen = () => {
   const [username, setUsername] = useState("");
@@ -77,8 +80,6 @@ const onCreateAnAccount = () =>{
           />
 
           <CustomButton text="Sign In With Google" onPress={onSignInGoogle} bgColor="#FAE9EA" fgColor="#DD4D44" />
-
-          <CustomButton text="Sign In Facebook" onPress={onSignInFacebook} bgColor="#e7eaf4" fgColor="#4765a9" />
 
           <CustomButton
             text="Don't have an account? Create one."
