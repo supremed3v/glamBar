@@ -18,13 +18,13 @@ import NewPassword from "./src/screens/NewPassword/NewPassword"
 export default function App() {
   return ( 
     <View style={styles.container}>
-      {/* <SignInScreen /> */}
+      <SignInScreen />
       {/* <ForgotPassword/>  */}
       {/* <SignupScreen/> */}
       {/* <TermsandConditions/> */}
       {/* <ClientDetails/> */}
       {/* <Home/>  */}
-      <SalonScreen/>
+      {/* <SalonScreen/> */}
       {/* <SalonServices/> */}
       {/* <NewPassword/> */}
     </View>

@@ -13,7 +13,8 @@ import image from "../../../assets/bg-screen.jpg";
 import logo from "../../../assets/logo-white.png";
 import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
-
+import  FontAwesome  from '@expo/vector-icons';
+import  Foundation  from '@expo/vector-icons';
 import React, { useState } from "react";
 
 const SignInScreen = () => {
@@ -29,10 +30,6 @@ const SignInScreen = () => {
     console.log("Forgot Password");
   };
 
-  const onSignInFacebook = () =>{
-      console.log("Hello FB");
-  }
-
   const onSignInGoogle = () =>{
     console.log("Hello Google");
 }
@@ -40,6 +37,7 @@ const SignInScreen = () => {
 const onCreateAnAccount = () =>{
     console.warn("Create an account");
 }
+
   return (
       <ScrollView showsVerticalScrollIndicator={false} >
     <View style={styles.container}>
@@ -49,20 +47,20 @@ const onCreateAnAccount = () =>{
             source={logo}
             style={[styles.logo, { height: height * 0.3 }]}
           />
+          <FontAwesome style={styles.userIcon} name="user" size={40} color="black" />
+          <Foundation style={styles.passwordIcon} name="key" size={40} color="black" />
         </View>
         <View style={styles.centerItems}>
           <Text style={styles.text}>Login or Signup to get started.</Text>
+          
 
           <CustomInput
             placeholder="Username"
             value={username}
             setValue={setUsername}
+            
           />
-           <CustomInput
-            placeholder="Firstname"
-            value={username}
-            setValue={setUsername}
-          />
+          
           <CustomInput
             placeholder="Password"
             value={password}
@@ -123,6 +121,14 @@ const styles = StyleSheet.create({
     zIndex: 2,
     maxWidth: 500,
   },
+  userIcon:{
+      position: "absolute",
+      marginTop: 20,
+  },
+  passwordIcon:{
+    position:"absolute",
+    marginTop: 80,
+  }
 });
 
 export default SignInScreen;

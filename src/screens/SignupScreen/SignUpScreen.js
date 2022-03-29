@@ -13,6 +13,7 @@ import bgSignup from "../../../assets/signup-bg.jpeg";
 
 import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
+import  Ionicons  from '@expo/vector-icons/Ionicons';
 
 import React, { useState } from "react";
 const SignupScreen = () => {
