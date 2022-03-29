@@ -21,8 +21,8 @@ export default function App() {
       {/* <SignupScreen/> */}
       {/* <TermsandConditions/> */}
       {/* <ClientDetails/> */}
-      {/* <Home/> */}
-      <SalonScreen/>
+      <Home/>
+      {/* <SalonScreen/> */}
     </View>
   );
 }
