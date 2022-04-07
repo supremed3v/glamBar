@@ -1,11 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 
+import {
+  StyleSheet,
+  View,
+} from "react-native";
+
+import React from "react";
+
+import SignInScreen from "./src/screens/SignInScreen/SignInScreen"
+import ForgotPassword from "./src/screens/ForgotPassword/ForgotPassword";
+import TermsandConditions from "./src/screens/TermsandConditions/TermsandConditions";
+import SignupScreen from "./src/screens/SignupScreen/SignUpScreen";
+import ClientDetails from "./src/screens/ClientDetails/ClientDetails";
+import Home from './src/screens/Home'
+import SalonScreen from './src/screens/SalonScreen'
+import SalonServices from "./src/screens/SalonScreen/SalonServices"
+import NewPassword from "./src/screens/NewPassword/NewPassword"
 export default function App() {
-  return (
+  return ( 
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/* <SignInScreen /> */}
+      {/* <ForgotPassword/>  */}
+      {/* <SignupScreen/> */}
+      {/* <TermsandConditions/> */}
+      {/* <ClientDetails/> */}
+      <Home/>
+      {/* <SalonScreen/> */}
+      {/* <SalonServices/> */}
+      {/* <NewPassword/> */}
     </View>
   );
 }
@@ -13,8 +34,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  }
 });
